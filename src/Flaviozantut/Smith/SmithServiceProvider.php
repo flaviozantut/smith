@@ -28,7 +28,13 @@ class SmithServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		\Artisan::add(new SmithCommand);
+		$this->app['command.smith.smith'] = $this->app->share(function($app)
+		{
+			return new SmithCommand($app);
+		});
+		$this->commands(
+			'command.smith.smith'
+		);
 	}
 
 	/**

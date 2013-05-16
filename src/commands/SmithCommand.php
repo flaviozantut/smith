@@ -18,7 +18,7 @@ class SmithCommand extends Command {
 	 *
 	 * @var string
 	 */
-	protected $description = 'Command description.';
+	protected $description = 'Boris for laravel';
 
 	/**
 	 * Create a new command instance.
@@ -37,7 +37,10 @@ class SmithCommand extends Command {
 	 */
 	public function fire()
 	{
-		//
+		$this->info('for more information visit https://github.com/d11wtq/boris');
+		$this->info('press CTRL-D to exit');
+		$boris = new \Boris\Boris('smith> ');
+		$boris->start();
 	}
 
 	/**
@@ -47,9 +50,7 @@ class SmithCommand extends Command {
 	 */
 	protected function getArguments()
 	{
-		return array(
-			array('example', InputArgument::REQUIRED, 'An example argument.'),
-		);
+		return array();
 	}
 
 	/**
@@ -59,9 +60,7 @@ class SmithCommand extends Command {
 	 */
 	protected function getOptions()
 	{
-		return array(
-			array('example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null),
-		);
+		return array();
 	}
 
 }

@@ -1,6 +1,9 @@
 {
     "name": "flaviozantut/smith",
-    "description": "",
+    "description": "laravel and Boris integration",
+    "keywords":["laravel","boris" ],
+    "homepage": "https://github.com/flaviozantut/smith",
+    "license": "MIT",
     "authors": [
         {
             "name": "flaviozantut",
